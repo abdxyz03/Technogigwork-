@@ -1,6 +1,12 @@
-document.querySelectorAll(".btn,.btn2").forEach(button=>{
-button.addEventListener("click",function(e){
-e.preventDefault();
-alert("This feature will be available soon!");
-});
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Technogigwork Loaded!");
+
+    const buttons = document.querySelectorAll(".btn");
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(e) {
+            e.preventDefault();
+            alert("Coming Soon!");
+        });
+    });
 });
