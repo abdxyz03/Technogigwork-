@@ -1,5 +1,5 @@
 import { auth } from "./firebase.js";
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const form = document.querySelector("form");
 
@@ -18,23 +18,8 @@ form.addEventListener("submit", async (e) => {
     await signInWithEmailAndPassword(auth, email, password);
 
     alert("✅ Login Successful!");
-    window.location.href = "dashboard.html"; // তোমার ড্যাশবোর্ড ফাইলের নাম যদি dashboard.html হয়
+    window.location.href = "dashboard.html";
   } catch (error) {
-    switch (error.code) {
-      case "auth/invalid-credential":
-        alert("❌ Email অথবা Password ভুল!");
-        break;
-      case "auth/user-not-found":
-        alert("❌ User পাওয়া যায়নি!");
-        break;
-      case "auth/wrong-password":
-        alert("❌ Password ভুল!");
-        break;
-      case "auth/invalid-email":
-        alert("❌ Invalid Email!");
-        break;
-      default:
-        alert(error.message);
-    }
+    alert(error.message);
   }
 });
