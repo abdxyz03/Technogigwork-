@@ -1,37 +1,256 @@
-<!DOCTYPE html>
+<!-- <!-- Withdraw Summary -->
+
+<div class="grid">
+
+<div class="box">
+<h3>💸 Total Withdraw</h3>
+<p>$0.00</p>
+</div>
+
+<div class="box">
+<h3>⏳ Pending</h3>
+<p>0</p>
+</div>
+
+<div class="box">
+<h3>✅ Approved</h3>
+<p>0</p>
+</div>
+
+<div class="box">
+<h3>❌ Rejected</h3>
+<p>0</p>
+</div>
+
+</div>
+
+<!-- Withdraw History -->
+
+<div class="card">
+
+<h2>
+<i class="fa-solid fa-clock-rotate-left"></i>
+Withdraw History
+</h2>
+
+<table style="width:100%;margin-top:15px;text-align:center;">
+
+<tr style="background:#22c55e;color:#fff;">
+<th>Date</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td colspan="3" style="padding:20px;">
+No withdraw history found.
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- Important Notice -->
+
+<div class="card">
+
+<h2>
+<i class="fa-solid fa-bullhorn"></i>
+Important Notice
+</h2>
+
+<p>🟢 Withdraw requests are reviewed within 24 hours.</p>
+
+<p>📱 Make sure your bKash number is correct.</p>
+
+<p>❌ Incorrect information may delay your payment.</p>
+
+<p>💰 The minimum withdrawal amount is <b>$5</b>.</p>
+
+</div><!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Withdraw - Technogigwork</title>
+
+<title>Withdraw | Technogigwork</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
+
 <body>
 
 <header>
+
 <div class="logo">
-<img src="image_7a589ab8.png" alt="Logo">
-<h1>Technogigwork</h1>
+
+<h2>Technogigwork</h2>
+
 </div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
 </header>
 
 <section class="hero">
-<h2>Withdraw Request</h2>
-<p>Minimum Withdraw: ৳500</p>
 
-<form style="max-width:400px;margin:auto;">
-<input type="text" placeholder="Bkash / Nagad Number" required style="width:100%;padding:12px;margin:10px 0;border-radius:8px;">
-<input type="number" placeholder="Amount" required style="width:100%;padding:12px;margin:10px 0;border-radius:8px;">
-<button class="btn" style="width:100%;">Submit Withdraw</button>
-</form>
+<h1>💸 Withdraw Balance</h1>
+
+<p>
+
+Withdraw your earnings directly to your bKash account.
+
+</p>
 
 </section>
 
-<footer>
-<p>© 2026 Technogigwork</p>
+<div class="dashboard-card">
+
+<div class="balance-box">
+
+<h3>
+
+<i class="fa-solid fa-wallet"></i>
+
+Available Balance
+
+</h3>
+
+<div class="balance">
+
+$0.00
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Withdraw Rules
+
+</h3>
+
+<p>
+
+✅ Minimum Withdraw: $5
+
+</p>
+
+<p>
+
+✅ Maximum Withdraw: $500
+
+</p>
+
+<p>
+
+✅ Payment Method: bKash
+
+</p>
+
+<p>
+
+✅ Processing Time: 24 Hours
+
+</p>
+
+</div>
+
+<form id="withdrawForm">
+
+<input
+type="text"
+placeholder="Enter your bKash Number"
+required>
+
+<input
+type="number"
+placeholder="Withdraw Amount"
+required>
+
+<button class="btn-green">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Submit Withdraw
+
+</button>
+
+  </form><!-- Action Buttons -->
+
+<div style="margin-top:25px;">
+
+<a href="dashboard.html" class="btn">
+<i class="fa-solid fa-arrow-left"></i>
+Back to Dashboard
+</a>
+
+<br><br>
+
+<a href="https://t.me/technogigwork" class="btn2">
+<i class="fa-brands fa-telegram"></i>
+Telegram Support
+</a>
+
+</div>
+
+</section>
+
+<!-- Bottom Navigation -->
+
+<div class="bottom-nav">
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i><br>
+Home
+</a>
+
+<a href="dashboard.html">
+<i class="fa-solid fa-chart-line"></i><br>
+Dashboard
+</a>
+
+<a href="withdraw.html" style="color:#22c55e;">
+<i class="fa-solid fa-money-bill-wave"></i><br>
+Withdraw
+</a>
+
+<a href="support.html">
+<i class="fa-solid fa-headset"></i><br>
+Support
+</a>
+
+</div>
+
+<!-- Footer -->
+
+<footer style="text-align:center;padding:25px;background:#fff;margin-top:80px;border-top:1px solid #ddd;">
+
+<h3 style="color:#22c55e;">Technogigwork</h3>
+
+<p>Fast • Secure • Trusted</p>
+
+<p style="color:#666;">
+© 2026 Technogigwork. All Rights Reserved.
+</p>
+
 </footer>
 
-<script src="script.js"></script>
-
 </body>
-</html>
+  </html>
