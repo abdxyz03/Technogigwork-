@@ -300,3 +300,79 @@ padding:15px;
 }
 
     }
+/* Dashboard Card */
+.dashboard-card{
+    max-width:420px;
+    margin:30px auto;
+    background:#ffffff;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.dashboard-card h2{
+    color:#ff8800;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.balance-box{
+    background:linear-gradient(135deg,#00c853,#00e676);
+    color:#fff;
+    border-radius:20px;
+    padding:20px;
+    margin:20px 0;
+}
+
+.balance-box h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.balance{
+    font-size:36px;
+    font-weight:bold;
+}
+
+.status{
+    color:#00c853;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.btn-green{
+    width:100%;
+    background:#00c853;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:15px;
+    font-size:18px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.btn-orange{
+    width:100%;
+    background:#ff9800;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:15px;
+    font-size:18px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.btn-red{
+    width:100%;
+    background:#f44336;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:15px;
+    font-size:18px;
+    margin-top:15px;
+    cursor:pointer;
+   }
