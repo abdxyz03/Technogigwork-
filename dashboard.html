@@ -1,220 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TechnoGigWork Dashboard</title>
 
+<link rel="stylesheet" href="style.css">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
+</head>
 
-body{
-background:#f5f7fb;
-}
+<body>
 
-header{
-width:100%;
-height:240px;
-background:linear-gradient(135deg,#071b36,#103a69);
-position:relative;
-overflow:hidden;
-border-radius:0 0 30px 30px;
-}
+<header class="header">
 
-header img{
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:.28;
-position:absolute;
-}
+<div class="header-top">
 
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.35);
-}
+<div class="logo-area">
 
-.topbar{
-position:absolute;
-top:20px;
-left:20px;
-right:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-color:#fff;
-}
+<img src="logo.png" alt="TechnoGigWork">
 
-.profile{
-display:flex;
-align-items:center;
-gap:12px;
-}
+<div>
 
-.profile img{
-width:55px;
-height:55px;
-border-radius:50%;
-border:3px solid gold;
-object-fit:cover;
-}
+<h2>TechnoGigWork</h2>
 
-.name{
-font-size:20px;
-font-weight:700;
-}
+<p id="greeting">Welcome Back</p>
 
-.uid{
-font-size:12px;
-opacity:.8;
-}
+</div>
 
-.notify{
-font-size:28px;
-}
+</div>
 
-.balanceCard{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:-70px;
-width:92%;
-background:#fff;
-border-radius:20px;
-padding:22px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-}
+<div class="header-icons">
 
-.balanceTitle{
-font-size:15px;
-color:#777;
-}
+<i class="fa-solid fa-bell"></i>
 
-.balance{
-font-size:38px;
-font-weight:800;
-color:#0d8d46;
-margin-top:5px;
-}
+</div>
 
-.row{
-display:flex;
-justify-content:space-between;
-margin-top:20px;
-}
+</div>
 
-.item{
-text-align:center;
-flex:1;
-}
+<div class="wallet-card">
 
-.item h3{
-font-size:22px;
-color:#111;
-}
+<div class="wallet-top">
 
-.item p{
-font-size:13px;
-color:#777;
-}
+<p>Available Balance</p>
 
-main{
-padding:95px 18px 20px;
-}
+<h1>৳ <span id="balance">0.00</span></h1>
 
-.sectionTitle{
-font-size:22px;
-font-weight:700;
-margin-bottom:15px;
-color:#222;
-}
+</div>
 
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
+<div class="wallet-bottom">
 
-.card{
-background:#fff;
-border-radius:18px;
-padding:20px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-text-align:center;
-transition:.3s;
-}
+<div>
 
-.card:active{
-transform:scale(.97);
-}
+<h3 id="totalEarn">৳0</h3>
 
-.icon{
-font-size:40px;
-margin-bottom:10px;
-}
+<span>Total Earn</span>
 
-.card h2{
-font-size:17px;
-color:#222;
-}
+</div>
 
-.card p{
-font-size:12px;
-color:#666;
-margin-top:6px;
-}<!-- ===== WORK SECTIONS ===== -->
-<section class="work-grid">
+<div>
 
-  <div class="card">
-    <h3>📧 Gmail Sell</h3>
-    <p>Sell verified Gmail accounts.</p>
-    <button>Start Work</button>
-  </div>
+<h3 id="totalWithdraw">৳0</h3>
 
-  <div class="card">
-    <h3>📝 Micro Tasks</h3>
-    <p>Complete small tasks and earn.</p>
-    <button>Open</button>
-  </div>
+<span>Withdraw</span>
 
-  <div class="card">
-    <h3>💼 Job Posts</h3>
-    <p>Available online jobs.</p>
-    <button>View Jobs</button>
-  </div>
+</div>
 
-  <div class="card">
-    <h3>🎁 Weekly Lottery</h3>
-    <p>1 ticket every 7 days.</p>
-    <button id="lotteryBtn">Claim Ticket</button>
-  </div>
+<div>
 
-  <div class="card">
-    <h3>👥 Referral</h3>
-    <h2 id="refCount">0</h2>
-    <button>Invite Friends</button>
-  </div>
+<h3 id="referralCount">0</h3>
 
-  <div class="card">
-    <h3>💳 Withdraw</h3>
-    <button>Withdraw Now</button>
-  </div>
+<span>Referral</span>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="quick-menu">
+
+<h2>Quick Menu</h2>
+
+<div class="menu-grid">
+
+<div class="menu-card" onclick="openDeposit()">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h4>bKash Deposit</h4>
+
+</div>
+
+<div class="menu-card" onclick="openWithdraw()">
+
+<i class="fa-solid fa-money-bill-transfer"></i>
+
+<h4>Withdraw</h4>
+
+</div>
+
+<div class="menu-card" onclick="openBuyGmail()">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h4>Gmail Sell</h4>
+
+</div>
+
+<div class="menu-card" onclick="openMicroTask()">
+
+<i class="fa-solid fa-list-check"></i>
+
+<h4>Micro Task</h4>
+
+  </div><div class="menu-card" onclick="openJobPost()">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<h4>Job Posts</h4>
+
+</div>
+
+<div class="menu-card" onclick="openReferral()">
+
+<i class="fa-solid fa-user-group"></i>
+
+<h4>Referral</h4>
+
+</div>
+
+<div class="menu-card" onclick="openHistory()">
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+<h4>History</h4>
+
+</div>
+
+<div class="menu-card" onclick="openSupport()">
+
+<i class="fa-solid fa-headset"></i>
+
+<h4>Support</h4>
+
+</div>
+
+<div class="menu-card" onclick="openProfile()">
+
+<i class="fa-solid fa-user"></i>
+
+<h4>Profile</h4>
+
+</div>
+
+<div class="menu-card" onclick="openSettings()">
+
+<i class="fa-solid fa-gear"></i>
+
+<h4>Settings</h4>
+
+</div>
+
+</div>
 
 </section>
+
+<section class="activity-section">
+
+<div class="section-header">
+
+<h2>Recent Activity</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div class="activity-card">
+
+<div class="activity-icon success">
+
+<i class="fa-solid fa-envelope"></i>
+
+</div>
+
+<div class="activity-info">
+
+<h4>Gmail Sold Successfully</h4>
+
+<p>Today • 09:30 AM</p>
+
+</div>
+
+<span class="amount plus">+ ৳150</span>
+
+</div>
+
+<div class="activity-card">
+
+<div class="activity-icon pending">
+
+<i class="fa-solid fa-wallet"></i>
+
+</div>
+
+<div class="activity-info">
+
+<h4>bKash Deposit Pending</h4>
+
+<p>Yesterday • 08:15 PM</p>
+
+</div>
+
+<span class="amount">৳500</span>
+
+</div>
+
+<div class="activity-card">
+
+<div class="activity-icon success">
+
+<i class="fa-solid fa-money-bill-transfer"></i>
+
+</div>
+
+<div class="activity-info">
+
+<h4>Withdraw Completed</h4>
+
+<p>2 Days Ago</p>
+
+</div>
+
+<span class="amount minus">- ৳300</span>
+
+</div>
+
+</section>
+
+<nav class="bottom-nav">
+
+<a class="active">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Home</span>
+
+</a>
+
+<a onclick="openMicroTask()">
+
+<i class="fa-solid fa-list-check"></i>
+
+<span>Work</span>
+
+</a>
+
+<a onclick="openDeposit()">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>Wallet</span>
+
+</a>
+
+<a onclick="openProfile()">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Profile</span>
+
+</a>
+
+</nav>
 
 <script type="module" src="dashboard.js"></script>
 
 </body>
-</html>
+
+          </html>
