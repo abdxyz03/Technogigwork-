@@ -252,3 +252,6 @@ updateClock();
 // ===============================
 
 console.log("TechnoGigWork Dashboard Loaded Successfully");
+function openDeposit() {
+  window.location.href = "deposit.html";
+  }
