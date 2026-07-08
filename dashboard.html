@@ -3,52 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard - Technogigwork</title>
+<title>TechnoGigWork Dashboard</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="dashboard-card">
+<div class="dashboard">
 
-<h2>🎉 Dashboard</h2>
+<header class="top-header">
 
-<p style="font-size:20px;font-weight:bold;">
-Welcome to <span style="color:#ff9800;">Technogigwork</span>
-</p>
+<div class="profile">
 
-<div class="balance-box">
-<h3>💰 Total Balance</h3>
-<div class="balance">$0.00</div>
+<div class="avatar">
+<i class="fas fa-user"></i>
 </div>
 
-<p style="font-size:22px;">👥 Referral: <b>0</b></p>
-
-<p class="status">🟢 Active</p>
-
-<button class="btn-green"
-onclick="location.href='gmail.html'">
-📧 Buy Gmail
-</button>
-
-<button class="btn-orange"
-onclick="location.href='withdraw.html'">
-💸 Withdraw
-</button>
-
-<button class="btn-orange"
-onclick="location.href='referral.html'">
-🎁 Referral
-</button>
-
-<button class="btn-red"
-id="logoutBtn">
-🚪 Logout
-</button>
+<div>
+<h2 id="userName">Welcome</h2>
+<p id="userEmail">Loading...</p>
+</div>
 
 </div>
+
+<button id="logoutBtn">
+<i class="fas fa-right-from-bracket"></i>
+</button>
+
+</header>
+
+
+<div class="balance-card">
+
+<h3>Total Balance</h3>
+
+<h1>৳ <span id="balance">0.00</span></h1>
+
+<p>Available Balance</p>
+
+</div>
+
+
+<div class="stats">
+
+<div class="card">
+<i class="fas fa-wallet"></i>
+<h3>Deposit</h3>
+<p>৳0</p>
+</div>
+
+<div class="card">
+<i class="fas fa-money-bill-wave"></i>
+<h3>Withdraw</h3>
+<p>৳0</p>
+</div>
+
+<div class="card">
+<i class="fas fa-users"></i>
+<h3>Referral</h3>
+<p>0</p>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-line"></i>
+<h3>Income</h3>
+<p>৳0</p>
+</div>
+
+</div>
+
+
+<div class="menu-grid">
+
+<a href="buygmail.html" class="menu-box">
+<i class="fas fa-envelope"></i>
+<span>Buy Gmail</span>
+</a>
+
+<a href="withdraw.html" class="menu-box">
+<i class="fas fa-money-check-dollar"></i>
+<span>Withdraw</span>
+</a>
+
+<a href="referral.html" class="menu-box">
+<i class="fas fa-user-plus"></i>
+<span>Referral</span>
+</a>
+
+<a href="task.html" class="menu-box">
+<i class="fas fa-list-check"></i>
+<span>Tasks</span>
+</a>
+
+<a href="profile.html" class="menu-box">
+<i class="fas fa-id-card"></i>
+<span>Profile</span>
+</a>
+
+<a href="support.html" class="menu-box">
+<i class="fas fa-headset"></i>
+<span>Support</span>
+</a>
+
+  </div><div class="activity-section">
+
+<h2>Recent Activity</h2>
+
+<div class="activity-card">
+<div>
+<h4>Welcome Bonus</h4>
+<p>Today • 10:30 AM</p>
+</div>
+
+<span class="green">+ ৳50</span>
+</div>
+
+<div class="activity-card">
+<div>
+<h4>Referral Reward</h4>
+<p>Yesterday</p>
+</div>
+
+<span class="green">+ ৳20</span>
+</div>
+
+<div class="activity-card">
+<div>
+<h4>Withdraw</h4>
+<p>2 Days Ago</p>
+</div>
+
+<span class="red">- ৳100</span>
+</div>
+
+</div>
+
+
+<footer class="bottom-nav">
+
+<a href="dashboard.html" class="active">
+<i class="fas fa-house"></i>
+<p>Home</p>
+</a>
+
+<a href="task.html">
+<i class="fas fa-list-check"></i>
+<p>Tasks</p>
+</a>
+
+<a href="referral.html">
+<i class="fas fa-users"></i>
+<p>Referral</p>
+</a>
+
+<a href="profile.html">
+<i class="fas fa-user"></i>
+<p>Profile</p>
+</a>
+
+</footer>
 
 <script type="module" src="dashboard.js"></script>
 
 </body>
-</html>
+  </html>
