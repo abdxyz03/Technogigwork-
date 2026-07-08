@@ -5,170 +5,216 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TechnoGigWork Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<style>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
 
-<body>
+body{
+background:#f5f7fb;
+}
 
-<div class="dashboard">
+header{
+width:100%;
+height:240px;
+background:linear-gradient(135deg,#071b36,#103a69);
+position:relative;
+overflow:hidden;
+border-radius:0 0 30px 30px;
+}
 
-<header class="top-header">
+header img{
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:.28;
+position:absolute;
+}
 
-<div class="profile">
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.35);
+}
 
-<div class="avatar">
-<i class="fas fa-user"></i>
-</div>
+.topbar{
+position:absolute;
+top:20px;
+left:20px;
+right:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#fff;
+}
 
-<div>
-<h2 id="userName">Welcome</h2>
-<p id="userEmail">Loading...</p>
-</div>
+.profile{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-</div>
+.profile img{
+width:55px;
+height:55px;
+border-radius:50%;
+border:3px solid gold;
+object-fit:cover;
+}
 
-<button id="logoutBtn">
-<i class="fas fa-right-from-bracket"></i>
-</button>
+.name{
+font-size:20px;
+font-weight:700;
+}
 
-</header>
+.uid{
+font-size:12px;
+opacity:.8;
+}
 
+.notify{
+font-size:28px;
+}
 
-<div class="balance-card">
+.balanceCard{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:-70px;
+width:92%;
+background:#fff;
+border-radius:20px;
+padding:22px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
 
-<h3>Total Balance</h3>
+.balanceTitle{
+font-size:15px;
+color:#777;
+}
 
-<h1>৳ <span id="balance">0.00</span></h1>
+.balance{
+font-size:38px;
+font-weight:800;
+color:#0d8d46;
+margin-top:5px;
+}
 
-<p>Available Balance</p>
+.row{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
 
-</div>
+.item{
+text-align:center;
+flex:1;
+}
 
+.item h3{
+font-size:22px;
+color:#111;
+}
 
-<div class="stats">
+.item p{
+font-size:13px;
+color:#777;
+}
 
-<div class="card">
-<i class="fas fa-wallet"></i>
-<h3>Deposit</h3>
-<p>৳0</p>
-</div>
+main{
+padding:95px 18px 20px;
+}
 
-<div class="card">
-<i class="fas fa-money-bill-wave"></i>
-<h3>Withdraw</h3>
-<p>৳0</p>
-</div>
+.sectionTitle{
+font-size:22px;
+font-weight:700;
+margin-bottom:15px;
+color:#222;
+}
 
-<div class="card">
-<i class="fas fa-users"></i>
-<h3>Referral</h3>
-<p>0</p>
-</div>
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
 
-<div class="card">
-<i class="fas fa-chart-line"></i>
-<h3>Income</h3>
-<p>৳0</p>
-</div>
+.card{
+background:#fff;
+border-radius:18px;
+padding:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+text-align:center;
+transition:.3s;
+}
 
-</div>
+.card:active{
+transform:scale(.97);
+}
 
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
 
-<div class="menu-grid">
+.card h2{
+font-size:17px;
+color:#222;
+}
 
-<a href="buygmail.html" class="menu-box">
-<i class="fas fa-envelope"></i>
-<span>Buy Gmail</span>
-</a>
+.card p{
+font-size:12px;
+color:#666;
+margin-top:6px;
+}<!-- ===== WORK SECTIONS ===== -->
+<section class="work-grid">
 
-<a href="withdraw.html" class="menu-box">
-<i class="fas fa-money-check-dollar"></i>
-<span>Withdraw</span>
-</a>
+  <div class="card">
+    <h3>📧 Gmail Sell</h3>
+    <p>Sell verified Gmail accounts.</p>
+    <button>Start Work</button>
+  </div>
 
-<a href="referral.html" class="menu-box">
-<i class="fas fa-user-plus"></i>
-<span>Referral</span>
-</a>
+  <div class="card">
+    <h3>📝 Micro Tasks</h3>
+    <p>Complete small tasks and earn.</p>
+    <button>Open</button>
+  </div>
 
-<a href="task.html" class="menu-box">
-<i class="fas fa-list-check"></i>
-<span>Tasks</span>
-</a>
+  <div class="card">
+    <h3>💼 Job Posts</h3>
+    <p>Available online jobs.</p>
+    <button>View Jobs</button>
+  </div>
 
-<a href="profile.html" class="menu-box">
-<i class="fas fa-id-card"></i>
-<span>Profile</span>
-</a>
+  <div class="card">
+    <h3>🎁 Weekly Lottery</h3>
+    <p>1 ticket every 7 days.</p>
+    <button id="lotteryBtn">Claim Ticket</button>
+  </div>
 
-<a href="support.html" class="menu-box">
-<i class="fas fa-headset"></i>
-<span>Support</span>
-</a>
+  <div class="card">
+    <h3>👥 Referral</h3>
+    <h2 id="refCount">0</h2>
+    <button>Invite Friends</button>
+  </div>
 
-  </div><div class="activity-section">
+  <div class="card">
+    <h3>💳 Withdraw</h3>
+    <button>Withdraw Now</button>
+  </div>
 
-<h2>Recent Activity</h2>
-
-<div class="activity-card">
-<div>
-<h4>Welcome Bonus</h4>
-<p>Today • 10:30 AM</p>
-</div>
-
-<span class="green">+ ৳50</span>
-</div>
-
-<div class="activity-card">
-<div>
-<h4>Referral Reward</h4>
-<p>Yesterday</p>
-</div>
-
-<span class="green">+ ৳20</span>
-</div>
-
-<div class="activity-card">
-<div>
-<h4>Withdraw</h4>
-<p>2 Days Ago</p>
-</div>
-
-<span class="red">- ৳100</span>
-</div>
-
-</div>
-
-
-<footer class="bottom-nav">
-
-<a href="dashboard.html" class="active">
-<i class="fas fa-house"></i>
-<p>Home</p>
-</a>
-
-<a href="task.html">
-<i class="fas fa-list-check"></i>
-<p>Tasks</p>
-</a>
-
-<a href="referral.html">
-<i class="fas fa-users"></i>
-<p>Referral</p>
-</a>
-
-<a href="profile.html">
-<i class="fas fa-user"></i>
-<p>Profile</p>
-</a>
-
-</footer>
+</section>
 
 <script type="module" src="dashboard.js"></script>
 
 </body>
-  </html>
+</html>
