@@ -5,6 +5,8 @@ import {
   query,
   where,
   getDocs
+  updateDoc,
+  doc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const depositList = document.getElementById("depositList");
@@ -53,3 +55,23 @@ async function loadDeposits() {
 }
 
 loadDeposits();
+async function approveDeposit(id) {
+  await updateDoc(doc(db, "deposits", id), {
+    status: "Approved"
+  });
+
+  alert("Deposit Approved");
+  loadDeposits();
+}
+
+async function rejectDeposit(id) {
+  await updateDoc(doc(db, "deposits", id), {
+    status: "Rejected"
+  });
+
+  alert("Deposit Rejected");
+  loadDeposits();
+}
+
+window.approveDeposit = approveDeposit;
+window.rejectDeposit = rejectDeposit;
