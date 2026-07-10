@@ -255,3 +255,53 @@ console.log("TechnoGigWork Dashboard Loaded Successfully");
 function openDeposit() {
   window.location.href = "deposit.html";
   }
+function openDeposit() {
+    window.location.href = "deposit.html";
+}
+
+function openWithdraw() {
+    window.location.href = "withdraw.html";
+}
+
+function openBuyGmail() {
+    window.location.href = "gmail.html";
+}
+
+function openMicroTask() {
+    alert("Micro Task Coming Soon");
+}
+
+function openJobPost() {
+    alert("Job Posts Coming Soon");
+}
+
+function openReferral() {
+    window.location.href = "referral.html";
+}
+
+function openHistory() {
+    alert("History Coming Soon");
+}
+
+function openSupport() {
+    window.location.href = "contact.html";
+}
+
+function openProfile() {
+    alert("Profile Coming Soon");
+}
+
+function openSettings() {
+    alert("Settings Coming Soon");
+}
+
+window.openDeposit = openDeposit;
+window.openWithdraw = openWithdraw;
+window.openBuyGmail = openBuyGmail;
+window.openMicroTask = openMicroTask;
+window.openJobPost = openJobPost;
+window.openReferral = openReferral;
+window.openHistory = openHistory;
+window.openSupport = openSupport;
+window.openProfile = openProfile;
+window.openSettings = openSettings;
