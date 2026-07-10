@@ -15,3 +15,8 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 export { auth };
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const db = getFirestore(app);
+
+export { auth, db };
