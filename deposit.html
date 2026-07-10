@@ -33,25 +33,8 @@ After sending money from bKash, enter the amount and Transaction ID, then submit
 </p>
 
 </div>
+<script type="module" src="deposit.js"></script>
 
-<script>
-function submitDeposit(){
-
-const amount=document.getElementById("amount").value.trim();
-const trx=document.getElementById("trxid").value.trim();
-
-if(amount==="" || trx===""){
-alert("Please enter amount and Transaction ID.");
-return;
-}
-
-alert("Your deposit request has been submitted successfully!");
-
-document.getElementById("amount").value="";
-document.getElementById("trxid").value="";
-
-}
-</script>
 
 </body>
   </html>
