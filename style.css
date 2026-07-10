@@ -910,3 +910,21 @@ font-size:14px;
 color:#666;
 text-align:center;
   }
+.approve-btn{
+background:#16a34a;
+color:#fff;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+margin-right:10px;
+cursor:pointer;
+}
+
+.reject-btn{
+background:#dc2626;
+color:#fff;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+  }
